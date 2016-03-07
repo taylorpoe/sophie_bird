@@ -23,4 +23,21 @@ $( document ).ready(function() {
     initialIndex: 2
   });
 
+  $('.footer_window').bind('inview', monitorFooter);
+
 });
+
+function monitorFooter(event, visible) {
+  if (visible) {
+    $('.footer-link').each(function(i) {
+      var footerLink = $(this);
+      setTimeout(function() {
+        footerLink.addClass('reveal-links');
+      }, 300*i);
+    });
+  } else {
+    $('.footer-link').each(function(i) {
+      $(this).removeClass('reveal-links');
+    });
+  }
+}

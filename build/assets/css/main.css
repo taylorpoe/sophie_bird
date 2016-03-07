@@ -384,8 +384,16 @@ http://flickity.metafizzy.co
   opacity: 1;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: white;
+  background-color: #dbdbd4;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -430,10 +438,28 @@ a {
 
 a:hover, a:focus {
   color: #40a6ff;
+  text-decoration: underline;
 }
 
 .flickity-prev-next-button {
-  height: 60px;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+}
+
+.flickity-prev-next-button svg {
+  width: 44%;
+  height: 44%;
+  left: 28%;
+  top: 28%;
+}
+
+.flickity-prev-next-button.previous {
+  left: -78px;
+}
+
+.flickity-prev-next-button.next {
+  right: -78px;
 }
 
 .gigantic, .huge, .large, .bigger, .big,
@@ -536,8 +562,15 @@ input[type="button"]:focus {
   outline: 0;
 }
 
+h2 {
+  text-align: center;
+  color: #cecece;
+}
+
 .hero {
+  padding: 0;
   height: 87vh;
+  max-height: 800px;
   background-color: #923a61;
   margin-top: 0;
   color: #fff;
@@ -553,10 +586,10 @@ input[type="button"]:focus {
           transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 87%;
-  -webkit-filter: contrast(1.35) saturate(1.8) sepia(0.72) opacity(0.89);
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.35" intercept="-0.17500000000000004" /><feFuncG type="linear" slope="1.35" intercept="-0.17500000000000004" /><feFuncB type="linear" slope="1.35" intercept="-0.17500000000000004" /></feComponentTransfer><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1.6296000000000002 -0.572 -0.0576 0 0 -0.17040000000000002 1.246 -0.0576 0 0 -0.17040000000000002 -0.572 1.7424000000000002 0 0 0 0 0 1 0" /><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.56296 0.55368 0.13607999999999998 0 0 0.25127999999999995 0.77392 0.12096000000000001 0 0 0.19584000000000001 0.38448000000000004 0.37432 0 0 0 0 0 1 0" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncA type="table" tableValues="0 0.89" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: contrast(1.35) saturate(1.8) sepia(0.72) opacity(0.89);
-          filter: contrast(1.35) saturate(1.8) sepia(0.72) opacity(0.89);
+  -webkit-filter: grayscale(0.63) brightness(0.9) contrast(1.35);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.503938 0.450576 0.045486 0 0 0.133938 0.820576 0.045486 0 0 0.133938 0.450576 0.41548599999999997 0 0 0 0 0 1 0" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.9" /><feFuncG type="linear" slope="0.9" /><feFuncB type="linear" slope="0.9" /></feComponentTransfer><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.35" intercept="-0.17500000000000004" /><feFuncG type="linear" slope="1.35" intercept="-0.17500000000000004" /><feFuncB type="linear" slope="1.35" intercept="-0.17500000000000004" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: grayscale(0.63) brightness(0.9) contrast(1.35);
+          filter: grayscale(0.63) brightness(0.9) contrast(1.35);
 }
 
 .hero .v-center {
@@ -570,13 +603,32 @@ input[type="button"]:focus {
 }
 
 .hero .v-center h1, .hero .v-center h4 {
-  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(0deg, #dbc67a 0, #ffffff 100%);
+  background-repeat: repeat-x;
 }
 
-.bio {
-  background-color: #dbdbd4;
-  height: 100vh;
-  margin-top: -65px;
+.hero .v-center h1 {
+  font-size: 98px;
+  line-height: 1.2;
+  margin-bottom: -37px;
+}
+
+.hero .v-center h4 {
+  font-size: 36px;
+}
+
+.body-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 920px;
+  background-color: #fff;
+  padding: 60px 0;
+  margin: -61px auto 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 8px 64px 6px rgba(0, 0, 0, 0.17);
 }
 
 .photos_videos .photo-gallery {
@@ -585,4 +637,41 @@ input[type="button"]:focus {
 
 .photos_videos .photo-gallery .cell {
   height: 100%;
+}
+
+.footer_window {
+  height: 145px;
+  background-color: transparent;
+}
+
+footer {
+  padding: 30px;
+  height: 145px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+footer a {
+  opacity: 0;
+  margin: 0 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #6F6D6D;
+  margin-top: -10px;
+  -webkit-transition: opacity 300ms ease;
+          transition: opacity 300ms ease;
+}
+
+footer a:hover {
+  color: #6F6D6D;
+}
+
+footer .reveal-links {
+  margin-top: 0;
+  opacity: 1;
+  -webkit-transform: translate(-50px, 20px);
+          transform: translate(-50px, 20px);
 }
