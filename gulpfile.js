@@ -79,9 +79,9 @@ gulp.task('js', function () {
     return gulp.src(js.in)
       .pipe($.plumber())
       .pipe($.newer(js.out))
-      .pipe($.jshint())
-      .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
-      .pipe($.jshint.reporter('fail'))
+      // .pipe($.jshint())
+      // .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
+      // .pipe($.jshint.reporter('fail'))
       .pipe($.concat(js.filename))
       .pipe(gulp.dest(js.out));
   } else {

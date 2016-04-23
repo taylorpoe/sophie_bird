@@ -13,59 +13,104 @@ body
     video(poster="./assets/img/sophie-poster.png" autoplay="true" loop).video-style
       source(src="./assets/img/sophie.mp4")
       source(src="./assets/img/sophie.webm")
+      
+    nav
+      a(href="javascript:;" data-target="contact").nav-link Contact
+      a(href="javascript:;" data-target="videos").nav-link Videos
+      a(href="javascript:;" data-target="photos").nav-link Photos
+      a(href="javascript:;" data-target="proj").nav-link Recent Projects
+      a(href="javascript:;" data-target="bio").nav-link Biography
+      
     .v-center
       h1 Sophie Bird
-      h4 Violinist for the Helsingborg Symphony Orchestra
+      h4 Violin
       
-  .body-container
-    .bio
-      h2 About Me
-      p New Zealand born violinist Sophie Bird is one of the newest and youngest members of the Helsingborg Symphony Orchestra in the south of Sweden. She is in the process of finishing a Doctorate degree in violin performance (ABD) at Indiana Universities’ Jacobs School of Music, studying on scholarship under Mark Kaplan. Over the last decade she has toured with various artists throughout New Zealand, the United States, United Kingdom and Germany, including performances at the prestigious St Martin in the Fields, and the Edinburgh Festival Fringe. She’s played with such conductors as Christoph Eschenbach and Manfred Honeck, and received coaching and master classes from William Preucil, Andre Watts, Eric Kim, Joshua Bell and Midori Goto. She plays on an Italian violin from Erminio Farina (1909).
-      
-    .new_projects
-      h2 New Projects
-      <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="/missbdwalsh/videos/vb.222327161235606/624831380985180/?type=3"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/missbdwalsh/videos/624831380985180/"><a href="https://www.facebook.com/missbdwalsh/videos/624831380985180/">Miss Bridget Walsh &amp; All The Kickstarter Things - Explanation 2.0</a><p>Kickstarter explanation - 2.0 Now with GUEST APPEARANCES! (Watch in HD so you can see all their pretty faces...!)www.missbridgetwalsh.com/kickstarterGuest appearances from: Jamie Burne (Wales), Sophie Bird (Sweden), Jonathan Vantu (Israel) and Sxip Shirey (New York).Featuring music from the exceptionally talented...Jamie Burne (Wales), Dannie McKenzie &amp; Madi Weybury (Melbourne), Jonathan Vantu (Israel), Michael Triponel (London), Hersh (Hersh), Sophie Bird (Sweden) &amp; Sxip Shirey (New York). Mastered by Nick at Images &amp; Sound - Complete Post ProductionBling by Ashmary&quot;Miss Bridget Walsh &amp; The Little Messenger&quot; directed by J G Boberg FilmsLet&#039;s make some magic! xxxwww.missbridgetwalsh.com/kickstarter&#064;missbdwalsh</p>Posted by <a href="https://www.facebook.com/missbdwalsh/">Miss Bridget Walsh</a> on Tuesday, April 14, 2015</blockquote></div></div>
-      p In 2016 I am planning to collaborate with my wonderful friend and extremely talented and vivacious musician Bridget Walsh. We will spend time in Sweden together, recording and exploring music together. This will be added to an extensive collection of musical gifts from around the world, and made into an extremely diverse record.
+  #bio.body-container
+    .bio.no-marg
+      .bio-pic.circle-img
+        
+      p.fat-p <span class="p-start">N</span>ew Zealand born violinist Sophie Bird is one of the newest and youngest members of the Helsingborg Symphony Orchestra in the south of Sweden. She is in the process of finishing a Doctorate degree in violin performance (ABD) at Indiana Universities’ Jacobs School of Music, studying on scholarship under Mark Kaplan. Over the last decade she has toured with various artists throughout New Zealand, the United States, United Kingdom and Germany, including performances at the prestigious St Martin in the Fields, and the Edinburgh Festival Fringe. She’s played with such conductors as Christoph Eschenbach and Manfred Honeck, and received coaching and master classes from William Preucil, Andre Watts, Eric Kim, Joshua Bell and Midori Goto. She plays on an Italian violin from Erminio Farina (1909).
+        
+    #proj.new_projects
+      .row
+        .col.left-flush
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmissbdwalsh%2Fvideos%2Fvb.222327161235606%2F760634064071577%2F%3Ftype%3D3&show_text=0&width=560" width="100%" height="230" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+          //- <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="/missbdwalsh/videos/vb.222327161235606/624831380985180/?type=3"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/missbdwalsh/videos/624831380985180/"><a href="https://www.facebook.com/missbdwalsh/videos/624831380985180/">Miss Bridget Walsh &amp; All The Kickstarter Things - Explanation 2.0</a><p>Kickstarter explanation - 2.0 Now with GUEST APPEARANCES! (Watch in HD so you can see all their pretty faces...!)www.missbridgetwalsh.com/kickstarterGuest appearances from: Jamie Burne (Wales), Sophie Bird (Sweden), Jonathan Vantu (Israel) and Sxip Shirey (New York).Featuring music from the exceptionally talented...Jamie Burne (Wales), Dannie McKenzie &amp; Madi Weybury (Melbourne), Jonathan Vantu (Israel), Michael Triponel (London), Hersh (Hersh), Sophie Bird (Sweden) &amp; Sxip Shirey (New York). Mastered by Nick at Images &amp; Sound - Complete Post ProductionBling by Ashmary&quot;Miss Bridget Walsh &amp; The Little Messenger&quot; directed by J G Boberg FilmsLet&#039;s make some magic! xxxwww.missbridgetwalsh.com/kickstarter&#064;missbdwalsh</p>Posted by <a href="https://www.facebook.com/missbdwalsh/">Miss Bridget Walsh</a> on Tuesday, April 14, 2015</blockquote></div></div>
+          
+        .col.left-extra-p
+          h3 Recent Projects
+          p In 2016 I am planning to collaborate with my wonderful friend and extremely talented and vivacious musician Bridget Walsh. We will spend time in Sweden together, recording and exploring music together. This will be added to an extensive collection of musical gifts from around the world, and made into an extremely diverse record.
     
     .photos_videos
-      h2 Photos
+      #photos
+      h2(style="margin-top:40px;") Photos
       .photo-gallery
-        img(src="./assets/img/photo_gallery/sb1.jpg").cell
-        img(src="./assets/img/photo_gallery/sb2.jpg").cell
-        img(src="./assets/img/photo_gallery/sb3.jpg").cell
-        img(src="./assets/img/photo_gallery/sb4.jpg").cell
-        img(src="./assets/img/photo_gallery/sb5.jpg").cell
-        img(src="./assets/img/photo_gallery/sb6.jpg").cell
-        img(src="./assets/img/photo_gallery/sb7.jpg").cell
-        img(src="./assets/img/photo_gallery/sb8.jpg").cell
-        img(src="./assets/img/photo_gallery/sb9.jpg").cell
-        img(src="./assets/img/photo_gallery/sb10.jpg").cell
-        img(src="./assets/img/photo_gallery/sb11.jpg").cell
-        img(src="./assets/img/photo_gallery/sb12.jpg").cell
-        img(src="./assets/img/photo_gallery/sb13.jpg").cell
-        img(src="./assets/img/photo_gallery/sb14.jpg").cell
-        img(src="./assets/img/photo_gallery/sb15.jpg").cell
-        img(src="./assets/img/photo_gallery/sb16.jpg").cell
-        img(src="./assets/img/photo_gallery/sb17.jpg").cell
-        img(src="./assets/img/photo_gallery/sb18.jpg").cell
-        img(src="./assets/img/photo_gallery/sb19.jpg").cell
-        img(src="./assets/img/photo_gallery/sb20.jpg").cell
-        img(src="./assets/img/photo_gallery/sb21.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb13.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb14.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb15.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb16.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb17.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb18.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb22.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb23.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb19.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb20.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb21.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb1.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb2.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb3.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb4.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb5.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb6.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb7.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb8.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb9.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb10.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb11.jpg").cell
+        img(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="./assets/img/photo_gallery/sb12.jpg").cell
         
       h2 Videos
+      #videos
       .video-gallery
-        iframe(width="640" height="360" src="https://www.youtube-nocookie.com/embed/DWdXPFVaYbo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen)
         iframe(width="640" height="360" src="https://www.youtube-nocookie.com/embed/-DlRGbx-FPU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen)
         iframe(width="640" height="360" src="https://www.youtube-nocookie.com/embed/Mt7kr1CqRpE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen)
         iframe(width="640" height="360" src="https://www.youtube-nocookie.com/embed/CE-jxjsmCT0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen)
-  
-  .footer_window
+        iframe(width="640" height="360" src="https://www.youtube-nocookie.com/embed/DWdXPFVaYbo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen)
+  #contact.footer_window
+    .tripper
   
   footer
     .footer-links-wrapper
-      a(href="https://www.instagram.com/sophiemariebird/").footer-link Instagram
-      a(href="http://sophievaleriebird.tumblr.com/").footer-link Tumblr
-      a(href="http://www.helsingborgskonserthus.se/").footer-link Helsingborg Symphony Orchestra
-      
+      a(href="https://www.instagram.com/sophiemariebird/" title="Instagram").footer-link
+        img(src="/assets/img/social/instagram.svg").social-icons
+      a(href="http://sophievaleriebird.tumblr.com/" title="Tumblr").footer-link
+        img(src="/assets/img/social/tumblr.svg").social-icons
+      a(href="http://www.helsingborgskonserthus.se/" title="Helsingborg Symphony Orchestra").footer-link
+        img(src="/assets/img/social/website.svg").social-icons
+    a(href="mailto:sophiebird@gmail.com").footer-link.email sophiebird@gmail.com
+    
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
   script(src="./assets/js/app.js")
