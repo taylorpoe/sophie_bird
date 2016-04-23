@@ -1,7 +1,5 @@
 $( document ).ready(function() {
 
-  photosInit();
-
   $(document).on('click','.nav-link', function(event) {
     event.preventDefault();
     var target = "#" + this.getAttribute('data-target');
@@ -11,28 +9,38 @@ $( document ).ready(function() {
     }, 870);
   });
 
-  $('.photo-gallery').flickity({
-    cellAlign: 'center',
-    contain: true,
-    wrapAround: true,
-    imagesLoaded: true,
-    percentPosition: false,
-    setGallerySize: false,
-    pageDots: false,
-    freeScroll: true
-  });
+  $('.tripper').bind('inview', monitorFooter);
 
   $('.video-gallery').flickity({
-    cellAlign: 'center',
-    contain: true,
-    wrapAround: true,
-    imagesLoaded: true,
-    percentPosition: false,
-    pageDots: false,
-    freeScroll: true
-  });
+      cellAlign: 'center',
+      contain: true,
+      wrapAround: true,
+      imagesLoaded: true,
+      percentPosition: false,
+      pageDots: false,
+      freeScroll: true
+    });
 
-  $('.tripper').bind('inview', monitorFooter);
+  // Wait a short moment to initiate the galleries, so that the video header
+  // Can boot up undeterred.
+  setTimeout(function(){
+
+    photosInit();
+
+    $('.spinner').fadeOut();
+
+    $('.photo-gallery').flickity({
+      cellAlign: 'center',
+      contain: true,
+      wrapAround: true,
+      imagesLoaded: true,
+      percentPosition: false,
+      setGallerySize: false,
+      pageDots: false,
+      freeScroll: true
+    });
+
+  }, 5000);
 
 });
 
