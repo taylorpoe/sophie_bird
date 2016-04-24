@@ -636,7 +636,7 @@ nav a:hover, nav a:focus {
 
 .hero .v-center h4 {
   font-size: 54px;
-  margin-top: 50px;
+  margin-top: 51px;
 }
 
 .body-container {
@@ -736,11 +736,15 @@ nav a:hover, nav a:focus {
   border-radius: 50%;
 }
 
+.fb-video {
+  width: 100%;
+  height: 230px;
+}
+
 .photos_videos .photo-gallery {
   margin: -30px;
   height: 500px;
   max-height: 500px;
-  overflow: hidden;
 }
 
 .photos_videos .photo-gallery .cell {
@@ -853,6 +857,71 @@ footer .email {
   }
 }
 
+@media screen and (max-width: 992px) {
+
+  .flickity-prev-next-button {
+    top: 89%;
+    background-color: #f5f2ef;
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 42%;
+  }
+
+  .flickity-prev-next-button.next {
+    right: 42%;
+  }
+
+  .fat-p {
+    width: 90%;
+  }
+
+  .photos_videos .photo-gallery {
+    overflow: hidden;
+  }
+
+  .photos_videos .photo-gallery .flickity-prev-next-button {
+    display: none;
+  }
+
+  .photos_videos .video-gallery {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero .v-center h1 {
+    font-size: 62px;
+  }
+
+  .hero .v-center h4 {
+    font-size: 43px;
+  }
+
+  .fat-p {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 730px) {
+
+  .hero .video-style {
+    left: 53%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .hero .video-style {
+    left: 80% !important;
+  }
+}
+
 @media (max-width: 800px) {
 
   .row {
@@ -861,5 +930,22 @@ footer .email {
 
   .row .col {
     width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 792px) {
+
+  .row .left-flush {
+    margin-left: 0;
+  }
+
+  .more-top {
+    margin-top: 30px;
+  }
+
+  .fb-video {
+    height: 350px;
+    margin-bottom: 30px;
   }
 }
