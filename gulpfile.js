@@ -148,7 +148,7 @@ gulp.task('sass', function () {
     .pipe($.plumber())
     .pipe($.sass(styles.sassOpt))
     .pipe($.size({ title: 'styles In Size' }))
-    .pipe($.pleeease(styles.pleeeaseOpt))
+    // .pipe($.pleeease(styles.pleeeaseOpt))
     .pipe($.size({ title: 'styles Out Size' }))
     .pipe(gulp.dest(styles.out))
     .pipe(browsersync.reload({ stream: true }));

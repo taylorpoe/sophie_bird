@@ -12,6 +12,10 @@ a
   height: 50px
   width: 50px
   padding: 5px
+  @media screen and (max-width: $medium)
+    top: 89%
+    background-color: $o-gray
+
   svg
     width: 44%
     height: 44%
@@ -20,6 +24,9 @@ a
 
 .flickity-prev-next-button.previous
   left: -78px
-
+  @media screen and (max-width: $medium)
+    left: 33%
 .flickity-prev-next-button.next
   right: -78px
+  @media screen and (max-width: $medium)
+    right: 33%
